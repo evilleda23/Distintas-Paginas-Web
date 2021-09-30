@@ -21,13 +21,12 @@ html{
 body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
-    line-height: 1.6;
+    line-height: 2;
 }
 
 /*globales*/
 .contenedor{
-    max-width: 120rem;
-    width: 90%;
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -37,7 +36,7 @@ a{
 
 h1,h2,h3,h4{
     font-family: var(--fuenteHeading);
-
+    line-height: 1.2;
 }
 
 h1{
@@ -90,11 +89,12 @@ img{
 }
 @media(min-width: 768px){
     .header__texto{
-        margin-top: 12rem;
+        margin-top: 15rem;
     }
 }
 
 .barra{
+    padding-top: 4rem;
     color:var(--blanco);
 }
 
@@ -137,7 +137,7 @@ font-weight: 400;
     .contenido-principal{
         display: grid;
         grid-template-columns: 2fr 1fr;
-        column-gap: 3rem;
+        column-gap: 4rem;
     }
 }
 
@@ -148,13 +148,13 @@ font-weight: 400;
 }
 
 .entrada:last-of-type{
-    border-bottom: none;
-    margin: 0;
+    border: none;
+    margin-bottom: 0;
 }
 
 .button{
     display: block;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     color: white;
     text-decoration: none;     
     font-family: var(--fuenteHeading);
@@ -168,7 +168,7 @@ font-weight: 400;
 @media(min-width: 768px){
     .button{
         display: inline-block;
-        margin-bottom: 3rem;
+        /* margin-bottom: 3rem; */
     }
     
 }
@@ -176,4 +176,41 @@ font-weight: 400;
 .button-pr{
     background-color: var(--negro);
     
+}
+
+.button-sec{
+    background-color: var(--primario);
+    
+}
+.button:hover{
+    cursor: pointer;
+}
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 2px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info {
+    font-weight: normal;
+}
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+.curso__text{  
+    display: flex;
+    gap: 1rem;
+    line-height: 1;
 }
